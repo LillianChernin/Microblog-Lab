@@ -1,9 +1,10 @@
 h1 {
   color: #FF8B72;
   text-align: center;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Rubik Mono One', sans-serif;
   font-size: 48px;
-  text-shadow: 2px 2px #ff0000;
+  text-shadow: 2px 2px #82473a;
+  font-weight: lighter;
 }
 
 header {
@@ -26,10 +27,11 @@ button {
   background-color: #FF8B72;
   border: none;
   border-radius: none;
-  margin-left: 80px;
-  font-family: 'Nunito Sans', sans-serif;
+  margin-left: 75px;
+  font-family: 'Rubik Mono One', sans-serif;
   margin-top: 15px;
   font-size: 14px;
+  color: #82473a;
 }
 
 body {

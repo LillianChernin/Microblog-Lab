@@ -23,6 +23,8 @@ document.getElementById("post").addEventListener("click", (event) => {
 
 
 
+
+
 // const addMessage = () => {
 //   for (let key in localStorage) {
 //     let node = document.createElement("DIV")
