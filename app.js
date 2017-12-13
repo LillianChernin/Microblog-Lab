@@ -6,6 +6,7 @@ if (localStorage.getItem("1") !== undefined) {
       let node = document.createElement("DIV")
       let textnode = document.createTextNode(localStorage.getItem(iAsString))
       node.className = "messages";
+      node.id = iAsString;
       node.appendChild(textnode)
       document.getElementById("messages").appendChild(node);
       num++;
@@ -21,7 +22,14 @@ document.getElementById("post").addEventListener("click", (event) => {
   localStorage.setItem(num, post);
 });
 
-
+const messages = document.getElementsByClassName("messages");
+for (let i = 0; i < messages.length; i++) {
+  messages[i].addEventListener('click', (event) => {
+    messages[i].parentNode.removeChild(messages[i]);
+    num--;
+    document.getElementById("number-of-posts").innerHTML = "Number of Posts: " + num;
+  });
+}
 
 
 
