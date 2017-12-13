@@ -1,0 +1,53 @@
+h1 {
+  color: white;
+  text-align: center;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+header {
+  border-bottom: 5px solid white;
+  width: 500px;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 72px;
+
+}
+.messages {
+  color: black;
+  height: 175px;
+  width: 450px;
+  background-color: #afccdd;
+  padding: 20px;
+  font-size: 25px;
+  margin: 40px;
+  font-family: 'Nunito Sans', sans-serif;
+
+}
+#message-board {
+  text-align: center;
+
+}
+
+#entry-form {
+  margin-left: 230px;
+  margin-top: 30px;
+
+}
+
+input {
+  width: 200px;
+  font-family: 'Nunito Sans', sans-serif;
+  text-align: center;
+  background-color: #afccdd
+}
+button {
+  background-color: #FF8B72;
+  border: none;
+  border-radius: none;
+  margin-left: 80px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+  background-image: url("pexels-photo-132037.jpeg")
+}
