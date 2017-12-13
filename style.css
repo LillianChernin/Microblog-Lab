@@ -35,15 +35,22 @@ button {
 body {
   background-image: url("pexels-photo-132037.jpeg")
 }
+footer {
+  color: white;
+  text-outline: 2px 2px #000000;
+  text-align: right;
+  font-family: 'Nunito Sans', sans-serif;
+}
 .messages {
   color: black;
-  height: 175px;
+  height: 100px;
   width: 450px;
   background-color: #afccdd;
   padding: 20px;
-  font-size: 25px;
+  font-size: 16px;
   margin: 40px;
   font-family: 'Nunito Sans', sans-serif;
+  text-align: left;
 
 }
 
