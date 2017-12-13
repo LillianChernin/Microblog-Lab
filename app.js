@@ -1,14 +1,17 @@
-let num = 0
+let num = 0;
 if (localStorage.getItem("1") !== undefined) {
   const addMessage = () => {
-    for (let i = localStorage.length; i > 0; i--) {
-      let iAsString = i.toString();
-      let node = document.createElement("DIV")
-      let textnode = document.createTextNode(localStorage.getItem(iAsString))
+    for (let key in localStorage) {
+      let node = document.createElement("ARTICLE")
+      let textnode = document.createTextNode(localStorage.getItem(key))
       node.className = "messages";
-      node.id = iAsString;
+      node.id = key;
       node.appendChild(textnode)
-      document.getElementById("messages").appendChild(node);
+      if (num === 0) {
+        document.getElementById("messages").appendChild(node);
+      } else {
+        document.getElementById("messages").insertBefore(node, document.getElementById("messages").firstChild);
+      }
       num++;
     }
   }
@@ -22,24 +25,15 @@ document.getElementById("post").addEventListener("click", (event) => {
   localStorage.setItem(num, post);
 });
 
+
+
 const messages = document.getElementsByClassName("messages");
+
 for (let i = 0; i < messages.length; i++) {
   messages[i].addEventListener('click', (event) => {
+    let messageKey = messages[i].id
     messages[i].parentNode.removeChild(messages[i]);
-    num--;
-    document.getElementById("number-of-posts").innerHTML = "Number of Posts: " + num;
+    localStorage.removeItem(messageKey);
+    location.reload();
   });
 }
-
-
-
-// const addMessage = () => {
-//   for (let key in localStorage) {
-//     let node = document.createElement("DIV")
-//     var textnode = document.createTextNode(localStorage.getItem(key))
-//     node.className = "messages";
-//     node.appendChild(textnode)
-//     document.getElementById("messages").appendChild(node);
-//     num++;
-//   }
-// }
