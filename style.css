@@ -1,16 +1,39 @@
 h1 {
-  color: white;
+  color: #FF8B72;
   text-align: center;
   font-family: 'Nunito Sans', sans-serif;
+  font-size: 48px;
+  text-shadow: 2px 2px #ff0000;
 }
 
 header {
-  border-bottom: 5px solid white;
+  border-bottom: 5px solid #FF8B72;
   width: 500px;
   text-align: center;
   margin-top: 50px;
   margin-left: 72px;
 
+}
+input {
+  width: 200px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  border: none;
+  background-color: #afccdd;
+}
+button {
+  background-color: #FF8B72;
+  border: none;
+  border-radius: none;
+  margin-left: 80px;
+  font-family: 'Nunito Sans', sans-serif;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+body {
+  background-image: url("pexels-photo-132037.jpeg")
 }
 .messages {
   color: black;
@@ -23,31 +46,12 @@ header {
   font-family: 'Nunito Sans', sans-serif;
 
 }
+
 #message-board {
   text-align: center;
-
 }
 
 #entry-form {
   margin-left: 230px;
   margin-top: 30px;
-
-}
-
-input {
-  width: 200px;
-  font-family: 'Nunito Sans', sans-serif;
-  text-align: center;
-  background-color: #afccdd
-}
-button {
-  background-color: #FF8B72;
-  border: none;
-  border-radius: none;
-  margin-left: 80px;
-  font-family: 'Nunito Sans', sans-serif;
-}
-
-body {
-  background-image: url("pexels-photo-132037.jpeg")
 }
