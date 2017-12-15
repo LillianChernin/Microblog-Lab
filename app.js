@@ -1,18 +1,21 @@
 let num = 0;
-if (localStorage.getItem("1") !== undefined) {
+
+if (localStorage.getItem("1") !== null) {
   const addMessage = () => {
     for (let key in localStorage) {
-      let node = document.createElement("ARTICLE")
-      let textnode = document.createTextNode(localStorage.getItem(key))
-      node.className = "messages";
-      node.id = key;
-      node.appendChild(textnode)
-      if (num === 0) {
-        document.getElementById("messages").appendChild(node);
-      } else {
-        document.getElementById("messages").insertBefore(node, document.getElementById("messages").firstChild);
+      if (localStorage.getItem(key) !== null) {
+        let node = document.createElement("ARTICLE");
+        let textnode = document.createTextNode(localStorage.getItem(key));
+        node.className = "messages";
+        node.id = key;
+        node.appendChild(textnode)
+        if (num === 0) {
+          document.getElementById("messages").appendChild(node);
+        } else {
+          document.getElementById("messages").insertBefore(node, document.getElementById("messages").firstChild);
+        }
+        num++;
       }
-      num++;
     }
   }
   addMessage();
